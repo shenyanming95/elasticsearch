@@ -34,6 +34,7 @@ import org.elasticsearch.env.Environment;
 import org.elasticsearch.monitor.jvm.JvmInfo;
 import org.elasticsearch.node.NodeValidationException;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.security.Permission;
@@ -74,6 +75,16 @@ class Elasticsearch extends EnvironmentAwareCommand {
      * Main entry point for starting elasticsearch
      */
     public static void main(final String[] args) throws Exception {
+        // 指向启动根目录
+        String home = System.getProperty("user.dir").concat(File.separator).concat("home");
+        // 设置es启动环境必备参数：es.path.conf
+        System.setProperty("es.path.home", home);
+        System.setProperty("es.path.conf", home.concat(File.separator).concat("config"));
+        System.setProperty("log4j2.disable.jmx", "true");
+        System.setProperty("java.security.policy", System.getProperty("es.path.conf")
+            .concat(File.separator).concat("java.policy"));
+
+
         overrideDnsCachePolicyProperties();
         /*
          * We want the JVM to think there is a security manager installed so that if internal policy decisions that would be based on the
