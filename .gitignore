@@ -41,3 +41,11 @@ html_docs
 # random old stuff that we should look at the necessity of...
 /tmp/
 eclipse-build
+
+# runtime files
+home/bin/
+home/config/elasticsearch.keystore
+home/data/
+home/lib
+home/logs/
+home/plugins/
