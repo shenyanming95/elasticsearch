@@ -42,11 +42,10 @@ html_docs
 /tmp/
 eclipse-build
 
-
-# runtime dir
+# runtime files
+home/bin/
 home/config/elasticsearch.keystore
 home/data/
+home/lib
 home/logs/
-home/bin/
-home/lib/
 home/plugins/
