@@ -66,9 +66,6 @@ dependencies {
   testCompile "junit:junit:${versions.junit}"
   testCompile "org.hamcrest:hamcrest-all:${versions.hamcrest}"
   //this is needed to make RestHighLevelClientTests#testApiNamingConventions work from IDEs
-  testCompile "org.elasticsearch:rest-api-spec:${version}"
-
-  restSpec "org.elasticsearch:rest-api-spec:${version}"
 }
 
 //we need to copy the yaml spec so we can check naming (see RestHighlevelClientTests#testApiNamingConventions)

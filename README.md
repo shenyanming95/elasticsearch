@@ -89,3 +89,18 @@ elasticsearch 6.6 版本运行时使用 JDK8，编译时使用 JDK11，并且使
    ```groovy
    compile project(':libs:plugin-classloader')
    ```
+# 3 结构
+
+- >buildSrc：构建项目相关
+- >client：客户端，包括了rest-high-level-client等
+- >distribution：es打包发行相关，将elasticsearch打成各种发行包（zip，deb，rpm，tar）的模块
+- >docs：文档相关
+- >gradle：项目管理工具
+- >libs：依赖外部的类
+- >licenses：一些协议说明
+- >modules：es的重要模块
+- >plugins：插件相关
+- >qa：问题汇总
+- >server：核心代码
+- >test：测试类
+- >x-pack：提供安全性，警报，监视，报告，机器学习和许多其他功能
